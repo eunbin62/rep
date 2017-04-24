@@ -1,0 +1,52 @@
+#include <iostream>
+#include <stdlib.h>
+
+//using namespace std; 절대 하면 안됨 : - 100점
+
+int main(int argc, char** argv)
+{
+    /*
+    { // 이차원 배열
+        std::cout << argv[0] << std::endl;
+        if(argc > 1)
+        {
+            for(int i = 0; i < argc; i++)
+                std::cout << argv[i] << std::endl;
+                
+                
+        
+            std::cout << argv[0][1] << std::endl;
+        }
+    }*/
+    
+    { // cin 연습
+
+/*
+        int a;
+        std::cin >> a;
+        
+        std::cout << "a= " << a << std::endl;
+  */      
+        //char* ptr;
+        //std::cin >> ptr; // 안좋음
+        
+        char buff[1000];
+        std::cin.getline(buff, 1000, '\n');
+        std::cout << buff << std::endl;
+        std::cout << buff[0] <<", " << buff[1] << std::endl;
+        
+        // char -> 숫자로 변형
+        // "10" => '1' (0x31) * 10 + '0'(0x30) * 1
+        // '2' => 0x32, '9' => 0x39
+        std::cout << '1' - '0' << std::endl; 
+        
+        // string을 숫자로 변형
+        std::cout << atoi(buff) + 20 << std::endl;
+    };
+    
+    //
+    return 0; 
+}
+
+
+
